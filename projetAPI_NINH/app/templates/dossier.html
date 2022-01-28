@@ -1,0 +1,86 @@
+{% extends 'layoutS.html' %}
+
+{% block title %}Dossier{% endblock %}
+
+{% block content %}
+
+<h2>Dossier du patient {{name}}</h2>
+<div>
+    <p>Les détails du patient {{name}} sont ci-dessous:</p>
+    <div class="dossier">
+    <table>
+        <tr>
+            <td>id</td>
+            <td>{{n_id}}</td>
+        </tr>
+        <tr>
+        
+            <td>mdp</td>
+            <td>{{mdp}}</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td>gendre</td>
+            <td>{{gendre}}</td>
+        </tr>
+        <tr>    
+            <td>age</td>
+            <td>{{age}}</td>
+        </tr>
+        <tr>     
+            <td>chest</td>
+            <td>{{chest}}</td>
+        </tr>
+        <tr>    
+            <td>resting blood pressure</td>
+            <td>{{resting_blood_pressure}}</td>
+        </tr>
+        <tr>    
+            <td>serum cholestoral</td>
+            <td>{{cholestoral}}</td>
+        </tr>
+        <tr>    
+            <td>fasting blood sugar</td>
+            <td>{{sugar}}</td>
+        </tr>
+        <tr>    
+            <td>resting electrocardiographic results</td>
+            <td>{{electrocardiographic}}</td>
+        </tr>
+        <tr>    
+            <td>maximum heart rate achieved</td>
+            <td>{{maximumheart}}</td>
+        </tr>
+        <tr>    
+            <td>exercise induced angina</td>
+            <td>{{exercise_induced_angina}}</td>
+        </tr>
+        <tr>    
+            <td>oldpeak</td>
+            <td>{{oldpeak}}</td>
+        </tr>
+        <tr>    
+            <td>slope</td>
+            <td>{{slope}}</td>
+        </tr>
+        <tr>    
+            <td>number of major vessels</td>
+            <td>{{majorvessels}}</td>
+        </tr>
+        <tr>   
+            <td>thal</td>
+            <td>{{thal}}</td>
+       
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>{{result}}</td>
+        </tr>
+
+    </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+
+<html> 
+<head>
+<title>Login Page
+</title>
+<meta charset="utf-8">
+<style>
+            body {
+              background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3ac3ddb-903e-427e-8991-85b788462020/dbld77i-3249357c-f322-457f-b3f7-d9941aab04d2.png/v1/fill/w_1600,h_650,strp/sunset_clouds__15__by_duzulek_dbld77i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjUwIiwicGF0aCI6IlwvZlwvZDNhYzNkZGItOTAzZS00MjdlLTg5OTEtODViNzg4NDYyMDIwXC9kYmxkNzdpLTMyNDkzNTdjLWYzMjItNDU3Zi1iM2Y3LWQ5OTQxYWFiMDRkMi5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.rc35UDWDwJUrpfqGXo84bcwUbYmbZNaiTK9NBy7DBnM");
+            }
+           
+            .login-form{
+                text-align: center;
+                width: 100%;
+                max-width: 400px;
+                margin: 20px auto;
+                background-color: rgba(255, 255, 255, .3);
+                padding: 25px;
+                border: 2px dotted #cccccc;
+                border-radius: 10px;
+            }
+        </style>
+</head>
+<body>
+    <div class="login-form">
+      <h1><font face="Forte" size="18px" color="#F08080">
+			Bienvenue
+			</font> 
+	</h1>
+	
+      <br>		<a href="{{ url_for('login') }}" class="active">Vous avez un compte?</a>
+				<a href="{{ url_for('register') }}">Céer un compte</a>
+      <form action="/login" method="POST">
+        <input type="text" placeholder="Prénom et nom ou votre ID" name="username" value="{{request.form.id}}">
+         <br><input type="password" placeholder="Password" name="password" value="{{request.form.password}}">
+        <br>
+				<br><div class="msg">{{ msg }}</div>
+				<br><input type="submit" value="ME CONNECTER">
+      </form>
+      
+    </div>
+  </body>
+</html>

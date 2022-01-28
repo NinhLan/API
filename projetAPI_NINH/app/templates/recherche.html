@@ -1,0 +1,18 @@
+{% extends 'layoutS.html' %}
+
+{% block title %}dossier{% endblock %}
+
+{% block content %}
+
+<h2>Recherche dossier du patient</h2>
+<div>
+    <p>Veuillez entrer l'ID du patient pour le recherche</p>
+    <form action="trouver" method="post">
+			<input type="text" name="nid" placeholder="ID Patient" value="{{request.form.nid}}">
+			<input type="submit" value="Recherche">
+		</form>
+		<br><div class="msg">{{ msg }}</div>
+
+    </div>
+</div>
+{% endblock %}
